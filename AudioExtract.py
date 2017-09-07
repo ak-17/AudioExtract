@@ -2,7 +2,7 @@ import urllib2
 import re
 import sys,os
 video_data='%7C(.*?videoplayback.*?)%2C'
-def download(url):
+def downLoad(url):
     headers={'User-Agent':None}
     req=urllib2.Request(url,None,headers)
     s=urllib2.urlopen(req).read()
@@ -20,4 +20,4 @@ def download(url):
     #need to download ffmpeg if the script doesnt work here
     os.system(cmd);
 url=raw_input("Enter the youtube url\n")
-download(url)
+downLoad(url)
